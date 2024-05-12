@@ -10,7 +10,7 @@ public class Customer {
 		this.hasCompanyContract = hasCompanyContract;
 	}
 	
-	public String gradeRequest() {
+	public String getGradeRequest() {
 		return gradeRequest;
 	}
 	

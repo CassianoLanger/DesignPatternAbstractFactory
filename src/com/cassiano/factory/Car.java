@@ -2,12 +2,12 @@ package com.cassiano.factory;
 
 public class Car {
 
-	private int hourPower;
+	private int horsePower;
 	private String color;
 	private String fuelSource;
 	
-	public Car(int hourPower, String color, String fuelSource) {
-		this.hourPower = hourPower;
+	public Car(int horsePower, String color, String fuelSource) {
+		this.horsePower = horsePower;
 		this.color = color;
 		this.fuelSource = fuelSource;
 	}
@@ -29,11 +29,33 @@ public class Car {
 	}
 
 	public int getHourPower() {
-		return hourPower;
+		return horsePower;
 	}
 	
-	public void setHourPower(int hourPower) {
-		this.hourPower = hourPower;
+	public void setHourPower(int horsePower) {
+		this.horsePower = horsePower;
+	}
+
+	public void startEngine() {
+		StringBuilder stringBuilder= new StringBuilder();
+		stringBuilder.append("The ")
+					 .append(fuelSource)
+					 .append(" engine has been started, and is ready to utilize ")
+					 .append(horsePower);
+		System.out.println(stringBuilder.toString());
+	}
+	
+	public void clean() {
+		
+	}
+
+	public void mechanicCheck() {
+		StringBuilder stringBuilder = new StringBuilder();
+		stringBuilder.append("The car is alredy checked by mechanic. Everything is working as should.");
+	}
+
+	public void fuelCar() {
+		System.out.println("Car is being filled by " + fuelSource.toLowerCase());
 	}
 	
 }
