@@ -1,11 +1,18 @@
 package com.cassiano.factory;
 
-public class WithoutContractFactory extends Factory{
+public class WithoutContractFactory extends Factory {
 
 	@Override
 	Car retrieveCar(String requestedGrade) {
-		// TODO Auto-generated method stub
-		return null;
+		switch (requestedGrade) {
+		case "A":
+			return new Volkswagem(100, "red", "gas", "Volkswagem");
+		case "B":
+			return new Toyota(100, "black", "gas", "Toyota");
+		default:
+			System.out.println("The requested car are not available!");
+			return null;
+		}
 	}
 
 }
